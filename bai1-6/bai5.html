@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="canha" ; placeholder="Nhập cạnh a">
+<input type="text" id="canhb" ; placeholder="Nhập cạnh b">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let a=parseInt(document.getElementById("canha").value);
+        let b=parseInt(document.getElementById("canhb").value);
+        let s=(a*b)/2;
+        document.getElementById("ketqua").innerHTML="Diện tích hình chữ nhật = "+s;
+    }
+</script>
+</body>
+</html>
