@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<input id="nhietdo" type="text" placeholder="Nhập nhiệt độ C">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let a= document.getElementById("nhietdo").value;
+        let b=a*9/5+32;
+        document.getElementById("ketqua").innerHTML=a+" độ C bằng "+b+" độ F";
+    }
+</script>
+</body>
+</html>
