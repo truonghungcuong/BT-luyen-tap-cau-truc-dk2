@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<input type="text" id="canha" placeholder="Nhập cạnh a">
+<input type="text" id="canhb" placeholder="Nhập cạnh b">
+<input type="text" id="canhc" placeholder="Nhập cạnh c">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let a= parseInt(document.getElementById("canha").value);
+        let b= parseInt(document.getElementById("canhb").value);
+        let c= parseInt(document.getElementById("canhc").value);
+        if (a,b,c>0 && a+b>c && b+c>a && a+c>b){
+            document.getElementById("ketqua").innerHTML="Đây là ba cạnh của tam giác";
+        }else{
+            document.getElementById("ketqua").innerHTML="Đây không phải ba cạnh của tam giác";
+        }
+    }
+</script>
+</body>
+</html>
