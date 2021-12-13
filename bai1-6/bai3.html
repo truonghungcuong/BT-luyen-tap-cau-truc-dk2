@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<input id="canha" type="text" placeholder="Nhập cạnh a">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let a = parseInt(document.getElementById("canha").value);
+        let s = a*a;
+        document.getElementById("ketqua").innerHTML= "Diện tích hình vuông = "+s;
+    }
+</script>
+</body>
+</html>
