@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Phương trình có dạng: ax^2+bx+c=0</p>
+<input type="text" id="nhapa" placeholder="Giá trị a">
+<input type="text" id="nhapb" placeholder="Giá trị b">
+<input type="text" id="nhapc" placeholder="Giá trị c">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra() {
+        let a = parseInt(document.getElementById("nhapa").value);
+        let b = parseInt(document.getElementById("nhapb").value);
+        let c = parseInt(document.getElementById("nhapc").value);
+        let delta = b * b - 4 * a * c;
+        if (a === 0) {
+            if (b === 0) {
+                if (c === 0) {
+                    document.getElementById("ketqua").innerHTML = "Phương trình vô số nghiệm";
+                } else {
+                    document.getElementById("ketqua").innerHTML = "Phương trình vô nghiệm";
+                }
+            } else {
+                document.getElementById("ketqua").innerHTML = "Phương trình có nghiệm duy nhất: " + (-c / b);
+            }
+        } else if (delta > 0) {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.getElementById("ketqua").innerHTML = "Nghiệm thứ nhất x1 = " + x1 + " Nghiệm thứ hai x2 = " + x2;
+        } else if (delta === 0) {
+            let sum = -b + 2 * a;
+            document.getElementById("ketqua").innerHTML = "Phương trình có nghiệm kép: x1 = x2 = " + sum;
+        } else {
+            document.getElementById("ketqua").innerHTML = "Phương trình vô nghiệm";
+        }
+    }
+</script>
+</body>
+</html>
