@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<p>Phương trình có dạng: ax+b=0</p>
+<input type="text" id="nhapa" placeholder="Nhập giá trị a">
+<input type="text" id="nhapb" placeholder="Nhập giá trị b">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let a= parseInt(document.getElementById("nhapa").value);
+        let b= parseInt(document.getElementById("nhapb").value);
+        let x= -b/a;
+        if (a==0 && b==0){
+            document.getElementById("ketqua").innerHTML="Phương trình vô nghiệm";
+        }else if (a==0 && b!=0){
+            document.getElementById("ketqua").innerHTML="Phương trình vô nghiệm";
+        }else if (a!=0 && b==0){
+            document.getElementById("ketqua").innerHTML="Phương trình có nghiệm x=0";
+        }else{
+            document.getElementById("ketqua").innerHTML="Phương trình co nghiệm x= "+x;
+        }
+    }
+</script>
+</body>
+</html>
