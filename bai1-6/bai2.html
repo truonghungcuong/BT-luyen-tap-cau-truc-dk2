@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="dodai" type="text" placeholder="Nhập giá trị">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let a = document.getElementById("dodai").value;
+        let b = a*3.2808;
+        document.getElementById("ketqua").innerHTML= a+"m bằng "+b+"feet";
+    }
+</script>
+</body>
+</html>
