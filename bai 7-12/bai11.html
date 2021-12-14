@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="sotien" placeholder="Số tiền">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let a=parseInt(document.getElementById("sotien").value);
+        let b1=a*5/100;
+        let b2=a*10/100;
+        let b3=a*15/100;
+        let b4=a*20/100;
+        let b5=a*25/100;
+        let b6=a*30/100;
+        let b7=a*35/100;
+        if (0<a && a<=5000000){
+            document.getElementById("ketqua").innerHTML="tiền thuế: "+b1;
+        }else if (a<= 10000000){
+            document.getElementById("ketqua").innerHTML="tiền thuế: "+b2;
+        }else if (a<=18000000){
+            document.getElementById("ketqua").innerHTML="tiền thuế: "+b3;
+        }else if (a<=32000000){
+            document.getElementById("ketqua").innerHTML="tiền thuế: "+b4;
+        }else if (a<=52000000){
+            document.getElementById("ketqua").innerHTML="tiền thuế: "+b5;
+        }else if (a<=80000000){
+            document.getElementById("ketqua").innerHTML="tiền thuế: "+b6;
+        }else{
+            document.getElementById("ketqua").innerHTML="tiền thuế: "+b7;
+        }
+    }
+</script>
+</body>
+</html>
