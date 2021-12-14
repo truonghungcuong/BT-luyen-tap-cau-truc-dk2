@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="tienvay" placeholder="Số tiền vay">
+<input type="text" id="thangvay" placeholder="Số tháng vay">
+<input type="text" id="lai" placeholder="Lãi suất">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let tien=parseInt(document.getElementById("tienvay").value);
+        let thang=parseInt(document.getElementById("thangvay").value);
+        let lai=parseInt(document.getElementById("lai").value);
+        let laithang=lai/100;
+        let vaymotthang=tien*laithang+tien;
+        let vaydaihan=tien*Math.pow((1+laithang),thang);
+        if (thang==1){
+            document.getElementById("ketqua").innerHTML="Tổng tiền phải trả: "+vaymotthang;
+        }else if (thang>=2){
+            document.getElementById("ketqua").innerHTML="Tổng tiền phải trả "+vaydaihan;
+        }
+    }
+</script>
+</body>
+</html>
