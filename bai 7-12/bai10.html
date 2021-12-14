@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="sodien" placeholder="Số điện">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+  function kiemtra(){
+    let x=parseInt(document.getElementById("sodien").value);
+    let b1= x* 1678;
+    let b2= x* 1734;
+    let b3= x* 2014;
+    let b4= x* 2536;
+    let b5= x* 2834;
+    let b6= x* 2927;
+    if (0<x && x<=50){
+      document.getElementById("ketqua").innerHTML=b1;
+    }else if (51<=x && x<=100){
+      document.getElementById("ketqua").innerHTML=b2;
+    }else if (101<=x && x<=200){
+      document.getElementById("ketqua").innerHTML=b3;
+    }else if (201<=x && x<=300){
+      document.getElementById("ketqua").innerHTML=b4;
+    }else if (301<=x && x<=400){
+      document.getElementById("ketqua").innerHTML=b5;
+    }else{
+      document.getElementById("ketqua").innerHTML=b6;
+    }
+  }
+</script>
+</body>
+</html>
